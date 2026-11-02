@@ -1,0 +1,15 @@
+[package]
+name = "horizon-block-info"
+version = "1.0.0"
+edition = "2024"
+rust-version = "1.90"
+license = "MIT"
+description = "Block Info for Horizon: what the crosshair is on (name, tool, mod), highly customizable"
+publish = false
+
+[lib]
+# This exact source is also injected as the `crate::game::block_info` module
+# of Horizon's client by horizon-mixins.
+path = "mixins/block_info/runtime.rs"
+
+[workspace]
